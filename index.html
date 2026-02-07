@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ultimate Professional Time Website - Digital & Analog Clock, World Times, Alarms, Timer, Stopwatch, Pomodoro, Themes, Widgets & Much More by JigerAnkit.108">
+    <meta name="keywords" content="clock, time, timer, stopwatch, alarm, world clock, timezone, analog clock, digital clock, JigerAnkit.108">
+    <meta name="author" content="JigerAnkit.108">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Time Pro">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIlVsdGltYXRlIFByb2Zlc3Npb25hbCBUaW1lIFdlYnNpdGUiLAogICJzaG9ydF9uYW1lIjogIlRpbWUgUHJvIiwKICAiZGVzY3JpcHRpb24iOiAiQWxsLWluLU9uZSBUaW1lIE1hbmFnZW1lbnQgU29sdXRpb24gYnkgSmlnZXJBbmtpdC4xMDgiLAogICJzdGFydF91cmwiOiAiLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzY2N2VlYSIsCiAgInRoZW1lX2NvbG9yIjogIiM2NjdlZWEiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTkyIDE5MicgZmlsbD0nbm9uZSclM0UlM0NyZWN0IHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyBmaWxsPSclMjM2NjdlZWEnIHJ4PSczMCcvJTNFJTNDdGV4dCB4PSc1MCUyNScgeT0nNTAlMjUnIGZvbnQtc2l6ZT0nODAnIGZpbGw9JyUyM2ZmZicgdGV4dC1hbmNob3I9J21pZGRsZScgZHk9Jy4zZW0nJTNF4oCwJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDUxMiA1MTInIGZpbGw9J25vbmUnJTNFJTNDcmVjdCB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMicgZmlsbD0nJTIzNjY3ZWVhJyByeD0nODAnLyUzRSUzQ3RleHQgeD0nNTAlMjUnIHk9JzUwJTI1JyBmb250LXNpemU9JzI1MCcgZmlsbD0nJTIzZmZmJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkeT0nLjNlbSclM0XigLAlM0MvdGV4dCUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
+    
+    <title>⏰ Ultimate Professional Time Website - JigerAnkit.108</title>
+    
+    <style>
+        /* ============================================
+           GLOBAL RESET & BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* ============================================
+           CSS CUSTOM PROPERTIES (VARIABLES)
+           ============================================ */
+        :root {
+            /* Light Mode Colors */
+            --bg-light-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-light-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --bg-light-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            
+            /* Dark Mode Colors */
+            --bg-dark-primary: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --bg-dark-secondary: linear-gradient(135deg, #0f2027 0%, #203a43 0%, #2c5364 100%);
+            --bg-dark-tertiary: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+            
+            /* Glassmorphism Effects */
+            --glass-light: rgba(255, 255, 255, 0.15);
+            --glass-dark: rgba(0, 0, 0, 0.3);
+            --glass-border-light: rgba(255, 255, 255, 0.3);
+            --glass-border-dark: rgba(255, 255, 255, 0.1);
+            
+            /* Text Colors */
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --text-accent: #ffd700;
+            
+            /* Accent Colors */
+            --accent-primary: #ffd700;
+            --accent-secondary: #ff6b6b;
+            --accent-success: #4ecdc4;
+            --accent-warning: #ff9f43;
+            --accent-info: #54a0ff;
+            --accent-danger: #ee5a6f;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.3);
+            --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.4);
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Spacing */
+            --spacing-xs: 5px;
+            --spacing-sm: 10px;
+            --spacing-md: 20px;
+            --spacing-lg: 30px;
+            --spacing-xl: 40px;
+            
+            /* Border Radius */
+            --radius-sm: 10px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+            --radius-full: 50px;
+            --radius-circle: 50%;
+            
+            /* Z-index Layers */
+            --z-dropdown: 1000;
+            --z-modal: 2000;
+            --z-tooltip: 3000;
+            --z-notification: 4000;
+        }
+
+        /* ============================================
+           BODY & HTML STYLES
+           ============================================ */
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, -apple-system, BlinkMacSystemFont, system-ui;
+            background: var(--bg-light-primary);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-md);
+            transition: background var(--transition-slow), color var(--transition-slow);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark-primary);
+        }
+
+        body.custom-mode {
+            background: var(--custom-bg);
+        }
+
+        /* ============================================
+           MAIN CONTAINER
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================
+           HEADER SECTION
+           ============================================ */
+        header {
+            text-align: center;
+            padding: var(--spacing-lg);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #fff, var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            opacity: 0.9;
+            font-weight: 300;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Creator Badge in Header */
+        .creator-header-badge {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,107,107,0.2));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            display: inline-block;
+            border: 2px solid rgba(255,215,0,0.4);
+            box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(255,215,0,0.5);
+            }
+        }
+
+        .creator-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-left: 8px;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           NAVIGATION & CONTROLS
+           ============================================ */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+            align-items: center;
+            padding: var(--spacing-md);
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--glass-border-light);
+            animation: slideUp 0.7s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button, select {
+            padding: 14px 28px;
+            border: none;
+            border-radius: var(--radius-full);
+            background: var(--glass-light);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--text-light);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-md);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width var(--transition-normal), height var(--transition-normal);
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover, select:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+            background: var(--accent-primary);
+            color: #000;
+            border-color: var(--accent-primary);
+        }
+
+        button:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: var(--shadow-sm);
+        }
+
+        button.active {
+            background: var(--accent-success);
+            color: #000;
+            border-color: var(--accent-success);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        button:disabled:hover {
+            background: var(--glass-light);
+            color: var(--text-light);
+            transform: none;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+            padding-right: 45px;
+        }
+
+        select option {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px;
+        }
+
+        input[type="color"] {
+            width: 60px;
+            height: 50px;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            background: transparent;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-md);
+        }
+
+        input[type="color"]:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ============================================
+           MAIN CLOCK AREA
+           ============================================ */
+        .clock-area {
+            background: var(--glass-light);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-xl);
+            border: 2px solid var(--glass-border-light);
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .clock-area::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ============================================
+           DIGITAL CLOCK SECTION
+           ============================================ */
+        .digital-clock {
+            text-align: center;
+            z-index: 1;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.95;
+                transform: scale(1.02);
+            }
+        }
+
+        .time {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 800;
+            letter-spacing: 8px;
+            text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6),
+                         0 0 30px rgba(255, 215, 0, 0.5);
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(45deg, #fff, var(--accent-primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .date {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 400;
+            margin-top: var(--spacing-md);
+            opacity: 0.95;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .timezone-label {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            margin-top: var(--spacing-sm);
+            opacity: 0.85;
+            font-weight: 500;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            display: inline-block;
+        }
+
+        .day-period {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            margin-top: var(--spacing-sm);
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        /* ============================================
+           ANALOG CLOCK SECTION
+           ============================================ */
+        .analog-clock-container {
+            position: relative;
+            width: clamp(250px, 40vw, 400px);
+            height: clamp(250px, 40vw, 400px);
+            z-index: 1;
+            animation: rotateIn 1s ease-out;
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-180deg) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        .analog-clock {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-circle);
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 10px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4),
+                        inset 0 0 50px rgba(255, 255, 255, 0.1),
+                        inset 0 0 20px rgba(255, 215, 0, 0.2);
+            transition: all var(--transition-normal);
+        }
+
+        .analog-clock:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                        inset 0 0 60px rgba(255, 255, 255, 0.15);
+        }
+
+        .clock-number {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            font-weight: 700;
+            color: var(--text-light);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .clock-number span {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .clock-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            background: var(--accent-primary);
+            border-radius: var(--radius-circle);
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                        0 0 40px rgba(255, 215, 0, 0.4);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                            0 0 40px rgba(255, 215, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 215, 0, 1),
+                            0 0 60px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            background: var(--text-light);
+            border-radius: var(--radius-sm);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .hour-hand {
+            width: 10px;
+            height: clamp(60px, 15vw, 100px);
+            margin-left: -5px;
+            background: linear-gradient(to top, var(--accent-primary), rgba(255, 215, 0, 0.7));
+            z-index: 3;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .minute-hand {
+            width: 8px;
+            height: clamp(80px, 20vw, 140px);
+            margin-left: -4px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7));
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .second-hand {
+            width: 4px;
+            height: clamp(90px, 22vw, 160px);
+            margin-left: -2px;
+            background: linear-gradient(to top, #ff4444, #ff6666);
+            z-index: 1;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+            transition: transform 0.1s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .tick {
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            top: 15px;
+            left: 50%;
+            transform-origin: center;
+            border-radius: var(--radius-sm);
+        }
+
+        .tick.major {
+            width: 5px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============================================
+           WORLD CLOCKS SECTION
+           ============================================ */
+        .world-clocks-section {
+            width: 100%;
+            background: var(--glass-light);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--glass-border-light);
+        }
+
+        .world-clocks-section h2 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+            color: var(--accent-primary);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .world-clocks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .world-clock-card {
+            background: var(--glass-light);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--glass-border-light);
+            text-align: center;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .world-clock-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-primary);
+        }
+
+        .world-clock-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--accent-primary);
+        }
+
+        .world-clock-card .time-display {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: var(--spacing-sm) 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .world-clock-card .date-display {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           TOOLS SECTION
+           ============================================ */
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            width: 100%;
+        }
+
+        .tool-card {
+            background: var(--glass-light);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            border: 2px solid var(--glass-border-light);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tool-card:hover::before {
+            left: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-primary);
+        }
+
+        .tool-card h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: var(--spacing-md);
+            color: var(--accent-primary);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        .tool-display {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin: var(--spacing-lg) 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tool-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-top: var(--spacing-md);
+        }
+
+        .tool-controls button {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        input[type="datetime-local"],
+        input[type="number"],
+        input[type="text"],
+        input[type="time"] {
+            padding: 14px 20px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--glass-border-light);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--text-light);
+            font-size: 1rem;
+            width: 100%;
+            max-width: 100%;
+            margin: var(--spacing-sm) 0;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+
+        input[type="datetime-local"]:focus,
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        input[type="time"]:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        /* ============================================
+           POMODORO TIMER
+           ============================================ */
+        .pomodoro-settings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--spacing-sm);
+            margin: var(--spacing-md) 0;
+        }
+
+        .pomodoro-settings label {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        .pomodoro-status {
+            padding: var(--spacing-sm);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-sm) 0;
+            font-weight: 600;
+        }
+
+        .pomodoro-progress {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            margin: var(--spacing-md) 0;
+        }
+
+        .pomodoro-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-success), var(--accent-primary));
+            transition: width 1s linear;
+            border-radius: var(--radius-full);
+        }
+
+        /* ============================================
+           ALARM SECTION
+           ============================================ */
+        .alarm-list {
+            max-height: 300px;
+            overflow-y: auto;
+            margin: var(--spacing-md) 0;
+            padding: var(--spacing-sm);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-md);
+        }
+
+        .alarm-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-sm);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .alarm-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .alarm-time {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .alarm-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .alarm-actions {
+            display: flex;
+            gap: var(--spacing-xs);
+        }
+
+        .alarm-actions button {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        /* ============================================
+           STATISTICS & INFO CARDS
+           ============================================ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .stat-card {
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           NOTIFICATIONS
+           ============================================ */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--glass-light);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-xl);
+            border: 2px solid var(--accent-success);
+            z-index: var(--z-notification);
+            min-width: 300px;
+            animation: slideInRight 0.5s ease-out;
+            display: none;
+        }
+
+        .notification.show {
+            display: block;
+        }
+
+        .notification.error {
+            border-color: var(--accent-danger);
+        }
+
+        .notification.warning {
+            border-color: var(--accent-warning);
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .notification-icon {
+            font-size: 1.8rem;
+        }
+
+        .notification-text {
+            flex: 1;
+        }
+
+        .notification-title {
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .notification-message {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-circle);
+            transition: all var(--transition-fast);
+        }
+
+        .notification-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ============================================
+           MODAL / DIALOG
+           ============================================ */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: var(--z-modal);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--glass-light);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            border: 2px solid var(--glass-border-light);
+            animation: scaleIn 0.3s ease;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-circle);
+            transition: all var(--transition-fast);
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: flex-end;
+        }
+
+        /* ============================================
+           CREATOR FLOATING BADGE
+           ============================================ */
+        .creator-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(255, 107, 107, 0.25));
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 12px 20px;
+            border-radius: var(--radius-full);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            box-shadow: 0 5px 25px rgba(255, 215, 0, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .creator-badge:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(255, 215, 0, 0.6);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .creator-badge-text {
+            font-weight: 700;
+            font-size: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           SCROLLBAR CUSTOMIZATION
+           ============================================ */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-sm);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: var(--radius-sm);
+            border: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        /* ============================================
+           INSTALL PROMPT (PWA)
+           ============================================ */
+        .install-prompt {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 107, 107, 0.3));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px 30px;
+            border-radius: var(--radius-lg);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.5);
+            z-index: 1000;
+            display: none;
+            animation: slideUpBounce 0.5s ease-out;
+            max-width: 90%;
+        }
+
+        @keyframes slideUpBounce {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(100px);
+            }
+            60% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .install-prompt.show {
+            display: block;
+        }
+
+        .install-prompt-content {
+            text-align: center;
+        }
+
+        .install-prompt h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--accent-primary);
+        }
+
+        .install-prompt p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .install-prompt-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1024px) {
+            .container {
+                gap: var(--spacing-md);
+            }
+            
+            .tools {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+
+            body {
+                padding: var(--spacing-sm);
+            }
+
+            header h1 {
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+
+            .controls {
+                gap: var(--spacing-sm);
+            }
+
+            button, select {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .clock-area {
+                padding: var(--spacing-md);
+            }
+
+            .time {
+                font-size: 3rem;
+                letter-spacing: 4px;
+            }
+
+            .date {
+                font-size: 1.2rem;
+            }
+
+            .analog-clock-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hour-hand {
+                height: 70px;
+            }
+
+            .minute-hand {
+                height: 95px;
+            }
+
+            .second-hand {
+                height: 105px;
+            }
+
+            .world-clocks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .notification {
+                right: 10px;
+                left: 10px;
+                min-width: auto;
+            }
+
+            .modal {
+                width: 95%;
+                padding: var(--spacing-md);
+            }
+
+            .creator-badge {
+                bottom: 10px;
+                right: 10px;
+                padding: 10px 16px;
+            }
+
+            .creator-badge-text {
+                font-size: 0.85rem;
+            }
+
+            .install-prompt {
+                bottom: 70px;
+                padding: 15px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .controls {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            button, select {
+                width: 100%;
+            }
+
+            .tool-controls {
+                flex-direction: column;
+            }
+
+            .tool-controls button {
+                width: 100%;
+            }
+
+            .creator-header-badge {
+                padding: 10px 20px;
+            }
+
+            .creator-name {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ============================================
+           FULLSCREEN MODE
+           ============================================ */
+        .fullscreen-mode {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--bg-light-primary);
+            z-index: var(--z-modal);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        body.dark-mode .fullscreen-mode {
+            background: var(--bg-dark-primary);
+        }
+
+        body.custom-mode .fullscreen-mode {
+            background: var(--custom-bg);
+        }
+
+        /* ============================================
+           ACCESSIBILITY
+           ============================================ */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        button:focus-visible,
+        select:focus-visible,
+        input:focus-visible {
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ============================================
+           PRINT STYLES
+           ============================================ */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .controls,
+            .tool-controls,
+            button,
+            .creator-badge,
+            .install-prompt {
+                display: none;
+            }
+
+            .clock-area {
+                box-shadow: none;
+                border: 2px solid #000;
+            }
+        }
+
+        /* ============================================
+           ANIMATION PERFORMANCE
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ============================================
+           LAP TIMES STYLING
+           ============================================ */
+        #lapTimes {
+            max-height: 150px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+
+        #lapTimes > div {
+            padding: 5px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+            margin: 3px 0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ============================================
+             HEADER SECTION
+             ============================================ -->
+        <header>
+            <h1>⏰ Ultimate Professional Time Website</h1>
+            <p>Your All-in-One Time Management Solution</p>
+            <div class="creator-header-badge">
+                <span style="font-size: 0.9rem; opacity: 0.8;">Crafted by</span>
+                <span class="creator-name">JigerAnkit.108</span>
+                <span style="margin-left: 8px;">✨</span>
+            </div>
+        </header>
+
+        <!-- ============================================
+             CONTROL PANEL
+             ============================================ -->
+        <div class="controls">
+            <button id="toggleFormat" title="Toggle between 12-hour and 24-hour format">
+                24-Hour Format
+            </button>
+            
+            <button id="lightMode" title="Switch to light mode">
+                ☀️ Light Mode
+            </button>
+            
+            <button id="darkMode" title="Switch to dark mode">
+                🌙 Dark Mode
+            </button>
+            
+            <input type="color" id="customBg" title="Choose custom background color" value="#667eea">
+            
+            <select id="timezoneSelect" title="Select timezone" aria-label="Timezone selector">
+                <option value="local">🌍 Local Time</option>
+                <option value="UTC">🌐 UTC (Universal)</option>
+                <option value="Asia/Kolkata">🇮🇳 IST (India)</option>
+                <option value="America/New_York">🇺🇸 EST (New York)</option>
+                <option value="America/Los_Angeles">🇺🇸 PST (Los Angeles)</option>
+                <option value="America/Chicago">🇺🇸 CST (Chicago)</option>
+                <option value="Europe/London">🇬🇧 GMT (London)</option>
+                <option value="Europe/Paris">🇫🇷 CET (Paris)</option>
+                <option value="Europe/Moscow">🇷🇺 MSK (Moscow)</option>
+                <option value="Asia/Tokyo">🇯🇵 JST (Tokyo)</option>
+                <option value="Asia/Shanghai">🇨🇳 CST (Beijing)</option>
+                <option value="Asia/Dubai">🇦🇪 GST (Dubai)</option>
+                <option value="Australia/Sydney">🇦🇺 AEDT (Sydney)</option>
+                <option value="Pacific/Auckland">🇳🇿 NZDT (Auckland)</option>
+            </select>
+            
+            <button id="fullscreenBtn" title="Toggle fullscreen mode">
+                🖥️ Fullscreen
+            </button>
+            
+            <button id="downloadBtn" title="Download clock as image">
+                📸 Download
+            </button>
+            
+            <button id="installBtn" title="Install as app" class="hidden">
+                📱 Install App
+            </button>
+            
+            <button id="settingsBtn" title="Open settings">
+                ⚙️ Settings
+            </button>
+        </div>
+
+        <!-- ============================================
+             MAIN CLOCK AREA
+             ============================================ -->
+        <div class="clock-area" id="clockArea">
+            <div class="digital-clock">
+                <div class="time" id="digitalTime" aria-live="polite">00:00:00</div>
+                <div class="day-period" id="dayPeriod"></div>
+                <div class="date" id="digitalDate">Loading date...</div>
+                <div class="timezone-label" id="timezoneLabel">Local Time</div>
+            </div>
+
+            <div class="analog-clock-container">
+                <div class="analog-clock" id="analogClock" role="img" aria-label="Analog clock">
+                    <div class="clock-number" style="transform: rotate(0deg)">
+                        <span style="transform: rotate(0deg)">12</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(30deg)">
+                        <span style="transform: rotate(-30deg)">1</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(60deg)">
+                        <span style="transform: rotate(-60deg)">2</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(90deg)">
+                        <span style="transform: rotate(-90deg)">3</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(120deg)">
+                        <span style="transform: rotate(-120deg)">4</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(150deg)">
+                        <span style="transform: rotate(-150deg)">5</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(180deg)">
+                        <span style="transform: rotate(-180deg)">6</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(210deg)">
+                        <span style="transform: rotate(-210deg)">7</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(240deg)">
+                        <span style="transform: rotate(-240deg)">8</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(270deg)">
+                        <span style="transform: rotate(-270deg)">9</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(300deg)">
+                        <span style="transform: rotate(-300deg)">10</span>
+                    </div>
+                    <div class="clock-number" style="transform: rotate(330deg)">
+                        <span style="transform: rotate(-330deg)">11</span>
+                    </div>
+                    
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <div class="clock-center"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             WORLD CLOCKS SECTION
+             ============================================ -->
+        <div class="world-clocks-section">
+            <h2>🌍 World Clocks</h2>
+            <div class="world-clocks-grid" id="worldClocksGrid"></div>
+        </div>
+
+        <!-- ============================================
+             STATISTICS SECTION
+             ============================================ -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-value" id="dayOfYear">---</div>
+                <div class="stat-label">Day of Year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📆</div>
+                <div class="stat-value" id="weekOfYear">---</div>
+                <div class="stat-label">Week of Year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌅</div>
+                <div class="stat-value" id="dayProgress">---%</div>
+                <div class="stat-label">Day Progress</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="yearProgress">---%</div>
+                <div class="stat-label">Year Progress</div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             TOOLS SECTION
+             ============================================ -->
+        <div class="tools">
+            <!-- Countdown Timer -->
+            <div class="tool-card">
+                <h3>⏳ Countdown Timer</h3>
+                <input type="datetime-local" id="countdownInput" aria-label="Set countdown target date">
+                <div class="tool-display" id="countdownDisplay" aria-live="polite">Set a target date</div>
+                <div class="tool-controls">
+                    <button id="startCountdown" aria-label="Start countdown">▶️ Start</button>
+                    <button id="pauseCountdown" aria-label="Pause countdown">⏸️ Pause</button>
+                    <button id="resetCountdown" aria-label="Reset countdown">🔄 Reset</button>
+                </div>
+            </div>
+
+            <!-- Stopwatch -->
+            <div class="tool-card">
+                <h3>⏱️ Stopwatch</h3>
+                <div class="tool-display" id="stopwatchDisplay" aria-live="polite">00:00:00.000</div>
+                <div id="lapTimes"></div>
+                <div class="tool-controls">
+                    <button id="startStopwatch" aria-label="Start stopwatch">▶️ Start</button>
+                    <button id="stopStopwatch" aria-label="Stop stopwatch">⏸️ Stop</button>
+                    <button id="lapStopwatch" aria-label="Record lap time">🏁 Lap</button>
+                    <button id="resetStopwatch" aria-label="Reset stopwatch">🔄 Reset</button>
+                </div>
+            </div>
+
+            <!-- Pomodoro Timer -->
+            <div class="tool-card">
+                <h3>🍅 Pomodoro Timer</h3>
+                <div class="pomodoro-settings">
+                    <label>
+                        Work (min)
+                        <input type="number" id="pomodoroWork" value="25" min="1" max="60">
+                    </label>
+                    <label>
+                        Break (min)
+                        <input type="number" id="pomodoroBreak" value="5" min="1" max="30">
+                    </label>
+                    <label>
+                        Long Break (min)
+                        <input type="number" id="pomodoroLongBreak" value="15" min="1" max="60">
+                    </label>
+                </div>
+                <div class="pomodoro-status" id="pomodoroStatus">Ready to start</div>
+                <div class="pomodoro-progress">
+                    <div class="pomodoro-progress-bar" id="pomodoroProgressBar" style="width: 0%"></div>
+                </div>
+                <div class="tool-display" id="pomodoroDisplay" aria-live="polite">25:00</div>
+                <div class="tool-controls">
+                    <button id="startPomodoro" aria-label="Start Pomodoro">▶️ Start</button>
+                    <button id="pausePomodoro" aria-label="Pause Pomodoro">⏸️ Pause</button>
+                    <button id="resetPomodoro" aria-label="Reset Pomodoro">🔄 Reset</button>
+                </div>
+            </div>
+
+            <!-- Alarm Clock -->
+            <div class="tool-card">
+                <h3>⏰ Alarm Clock</h3>
+                <input type="time" id="alarmTimeInput" aria-label="Set alarm time">
+                <input type="text" id="alarmLabelInput" placeholder="Alarm label (optional)" aria-label="Alarm label">
+                <div class="alarm-list" id="alarmList">
+                    <p style="opacity: 0.7; text-align: center;">No alarms set</p>
+                </div>
+                <div class="tool-controls">
+                    <button id="addAlarm" aria-label="Add alarm">➕ Add Alarm</button>
+                    <button id="clearAlarms" aria-label="Clear all alarms">🗑️ Clear All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             FOOTER
+             ============================================ -->
+        <footer>
+            <div style="background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,107,107,0.15)); padding: 20px; border-radius: 15px; border: 2px solid rgba(255,215,0,0.3); margin-bottom: 15px;">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">
+                    <span style="font-size: 1.4rem;">👨‍💻</span>
+                    <span style="font-weight: 700; font-size: 1.3rem; background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background-size: 200% auto; animation: shimmer 3s linear infinite;">Creator: JigerAnkit.108</span>
+                </p>
+                <p style="opacity: 0.9; font-size: 0.95rem;">
+                    <span style="font-size: 1.2rem;">✨</span> Designed & Developed with Passion
+                </p>
+            </div>
+            <p>Made with ❤️ | Professional Time Website © 2026</p>
+            <p><a href="#" id="aboutLink">About</a> | <a href="#" id="helpLink">Help</a></p>
+        </footer>
+    </div>
+
+    <!-- ============================================
+         NOTIFICATION COMPONENT
+         ============================================ -->
+    <div class="notification" id="notification" role="alert" aria-live="assertive">
+        <div class="notification-content">
+            <span class="notification-icon" id="notificationIcon">✅</span>
+            <div class="notification-text">
+                <div class="notification-title" id="notificationTitle">Success</div>
+                <div class="notification-message" id="notificationMessage">Action completed!</div>
+            </div>
+            <button class="notification-close" id="notificationClose" aria-label="Close notification">✕</button>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL COMPONENT
+         ============================================ -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" role="dialog" aria-labelledby="modalTitle">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Settings</h2>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <h3>Clock Preferences</h3>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <input type="checkbox" id="showSecondsCheck" checked>
+                    <span>Show seconds on digital clock</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <input type="checkbox" id="showAnalogCheck" checked>
+                    <span>Show analog clock</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <input type="checkbox" id="soundEnabledCheck" checked>
+                    <span>Enable alarm sounds</span>
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="modalSave">Save Settings</button>
+                <button id="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creator Badge (Floating) -->
+    <div class="creator-badge" onclick="document.getElementById('aboutLink').click()">
+        <span style="margin-right: 8px;">👨‍💻</span>
+        <span class="creator-badge-text">JigerAnkit.108</span>
+    </div>
+
+    <!-- Install Prompt (PWA) -->
+    <div class="install-prompt" id="installPrompt">
+        <div class="install-prompt-content">
+            <h3>📱 Install Time Pro</h3>
+            <p>Install this app on your device for offline access and a better experience!</p>
+            <div class="install-prompt-buttons">
+                <button id="installPromptBtn" style="padding: 10px 20px;">Install Now</button>
+                <button id="installLaterBtn" style="padding: 10px 20px; background: rgba(255,255,255,0.1);">Later</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         JAVASCRIPT CODE
+         ============================================ -->
+    <script>
+        // ============================================
+        // GLOBAL VARIABLES & CONSTANTS
+        // ============================================
+        
+        let is24Hour = true;
+        let currentTimezone = 'local';
+        let showSeconds = true;
+        let showAnalogClock = true;
+        let soundEnabled = true;
+        
+        let countdownInterval = null;
+        let countdownPaused = false;
+        let countdownTargetDate = null;
+        let countdownRemainingTime = 0;
+        
+        let stopwatchInterval = null;
+        let stopwatchTime = 0;
+        let stopwatchRunning = false;
+        let lapCounter = 0;
+        let lapTimes = [];
+        
+        let pomodoroInterval = null;
+        let pomodoroTime = 25 * 60;
+        let pomodoroRunning = false;
+        let pomodoroPaused = false;
+        let pomodoroMode = 'work';
+        let pomodoroSessions = 0;
+        
+        let alarms = [];
+        let alarmCheckInterval = null;
+        
+        let deferredPrompt = null;
+
+        const worldTimezones = [
+            { name: 'New York', timezone: 'America/New_York', flag: '🇺🇸' },
+            { name: 'London', timezone: 'Europe/London', flag: '🇬🇧' },
+            { name: 'Paris', timezone: 'Europe/Paris', flag: '🇫🇷' },
+            { name: 'Tokyo', timezone: 'Asia/Tokyo', flag: '🇯🇵' },
+            { name: 'Dubai', timezone: 'Asia/Dubai', flag: '🇦🇪' },
+            { name: 'Sydney', timezone: 'Australia/Sydney', flag: '🇦🇺' },
+        ];
+
+        const digitalTime = document.getElementById('digitalTime');
+        const digitalDate = document.getElementById('digitalDate');
+        const dayPeriod = document.getElementById('dayPeriod');
+        const timezoneLabel = document.getElementById('timezoneLabel');
+        const hourHand = document.getElementById('hourHand');
+        const minuteHand = document.getElementById('minuteHand');
+        const secondHand = document.getElementById('secondHand');
+        const analogClock = document.getElementById('analogClock');
+
+        // ============================================
+        // INITIALIZE CLOCK TICK MARKS
+        // ============================================
+        
+        for (let i = 0; i < 60; i++) {
+            const tick = document.createElement('div');
+            tick.className = i % 5 === 0 ? 'tick major' : 'tick';
+            const containerWidth = 400;
+            const tickOrigin = containerWidth / 2 - 15;
+            tick.style.transformOrigin = `center ${tickOrigin}px`;
+            tick.style.transform = `rotate(${i * 6}deg)`;
+            analogClock.appendChild(tick);
+        }
+
+        // ============================================
+        // PWA SERVICE WORKER REGISTRATION
+        // ============================================
+        
+        if ('serviceWorker' in navigator) {
+            const swCode = `
+                const CACHE_NAME = 'time-pro-v1';
+                
+                self.addEventListener('install', (event) => {
+                    self.skipWaiting();
+                });
+                
+                self.addEventListener('activate', (event) => {
+                    event.waitUntil(clients.claim());
+                });
+                
+                self.addEventListener('fetch', (event) => {
+                    event.respondWith(
+                        caches.match(event.request).then((response) => {
+                            return response || fetch(event.request);
+                        })
+                    );
+                });
+            `;
+            
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            const swUrl = URL.createObjectURL(blob);
+            
+            navigator.serviceWorker.register(swUrl).then(() => {
+                console.log('✅ Service Worker registered successfully');
+            }).catch((error) => {
+                console.log('❌ Service Worker registration failed:', error);
+            });
+        }
+
+        // ============================================
+        // PWA INSTALL PROMPT
+        // ============================================
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            document.getElementById('installBtn').classList.remove('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('installPrompt').classList.add('show');
+            }, 3000);
+        });
+
+        document.getElementById('installBtn').addEventListener('click', () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        showNotification('App Installed! 🎉', 'Thanks for installing Time Pro');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        });
+
+        document.getElementById('installPromptBtn').addEventListener('click', () => {
+            document.getElementById('installPrompt').classList.remove('show');
+            document.getElementById('installBtn').click();
+        });
+
+        document.getElementById('installLaterBtn').addEventListener('click', () => {
+            document.getElementById('installPrompt').classList.remove('show');
+        });
+
+        window.addEventListener('appinstalled', () => {
+            showNotification('Success! 🎉', 'App installed successfully');
+            document.getElementById('installBtn').classList.add('hidden');
+            document.getElementById('installPrompt').classList.remove('show');
+        });
+
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+        
+        function showNotification(title, message, type = 'success') {
+            const notification = document.getElementById('notification');
+            const notificationIcon = document.getElementById('notificationIcon');
+            const notificationTitle = document.getElementById('notificationTitle');
+            const notificationMessage = document.getElementById('notificationMessage');
+            
+            notification.className = 'notification show';
+            
+            if (type === 'error') {
+                notification.classList.add('error');
+                notificationIcon.textContent = '❌';
+            } else if (type === 'warning') {
+                notification.classList.add('warning');
+                notificationIcon.textContent = '⚠️';
+            } else {
+                notificationIcon.textContent = '✅';
+            }
+            
+            notificationTitle.textContent = title;
+            notificationMessage.textContent = message;
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+        }
+
+        function playSound() {
+            if (!soundEnabled) return;
+            
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 800;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } catch (error) {
+                console.log('Sound playback failed:', error);
+            }
+        }
+
+        function formatTime(totalSeconds, includeMilliseconds = false) {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = Math.floor(totalSeconds % 60);
+            const milliseconds = Math.floor((totalSeconds % 1) * 1000);
+            
+            let timeString = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (includeMilliseconds) {
+                timeString += `.${String(milliseconds).padStart(3, '0')}`;
+            }
+            
+            return timeString;
+        }
+
+        function getDayOfYear(date) {
+            const start = new Date(date.getFullYear(), 0, 0);
+            const diff = date - start;
+            const oneDay = 1000 * 60 * 60 * 24;
+            return Math.floor(diff / oneDay);
+        }
+
+        function getWeekOfYear(date) {
+            const firstDayOfYear = new Date(date.getFullYear(), 0, 1);
+            const pastDaysOfYear = (date - firstDayOfYear) / 86400000;
+            return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+        }
+
+        // ============================================
+        // MAIN CLOCK UPDATE FUNCTION
+        // ============================================
+        
+        function updateClock() {
+            const now = currentTimezone === 'local' 
+                ? new Date() 
+                : new Date(new Date().toLocaleString('en-US', { timeZone: currentTimezone }));
+
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            let displayHours = hours;
+            let ampm = '';
+
+            if (!is24Hour) {
+                ampm = hours >= 12 ? 'PM' : 'AM';
+                displayHours = hours % 12 || 12;
+                dayPeriod.textContent = ampm;
+            } else {
+                dayPeriod.textContent = '';
+            }
+
+            let timeString = `${String(displayHours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+            if (showSeconds) {
+                timeString += `:${String(seconds).padStart(2, '0')}`;
+            }
+            
+            digitalTime.textContent = timeString;
+
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            digitalDate.textContent = now.toLocaleDateString('en-US', options);
+
+            if (showAnalogClock) {
+                const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+                const minuteDeg = minutes * 6 + seconds * 0.1;
+                const secondDeg = seconds * 6;
+
+                hourHand.style.transform = `rotate(${hourDeg}deg)`;
+                minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+                secondHand.style.transform = `rotate(${secondDeg}deg)`;
+            }
+
+            updateStatistics(now);
+            updateWorldClocks();
+            checkAlarms(now);
+        }
+
+        function updateStatistics(date) {
+            document.getElementById('dayOfYear').textContent = getDayOfYear(date);
+            document.getElementById('weekOfYear').textContent = getWeekOfYear(date);
+            
+            const totalSecondsInDay = 24 * 60 * 60;
+            const secondsElapsed = date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+            const dayProgress = ((secondsElapsed / totalSecondsInDay) * 100).toFixed(1);
+            document.getElementById('dayProgress').textContent = `${dayProgress}%`;
+            
+            const startOfYear = new Date(date.getFullYear(), 0, 1);
+            const endOfYear = new Date(date.getFullYear() + 1, 0, 1);
+            const yearProgress = ((date - startOfYear) / (endOfYear - startOfYear) * 100).toFixed(1);
+            document.getElementById('yearProgress').textContent = `${yearProgress}%`;
+        }
+
+        function updateWorldClocks() {
+            const worldClocksGrid = document.getElementById('worldClocksGrid');
+            worldClocksGrid.innerHTML = '';
+            
+            worldTimezones.forEach(tz => {
+                const now = new Date(new Date().toLocaleString('en-US', { timeZone: tz.timezone }));
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+                
+                const timeString = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                const dateString = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                
+                const card = document.createElement('div');
+                card.className = 'world-clock-card';
+                card.innerHTML = `
+                    <h3>${tz.flag} ${tz.name}</h3>
+                    <div class="time-display">${timeString}</div>
+                    <div class="date-display">${dateString}</div>
+                `;
+                
+                worldClocksGrid.appendChild(card);
+            });
+        }
+
+        // ============================================
+        // THEME CONTROLS
+        // ============================================
+        
+        document.getElementById('toggleFormat').addEventListener('click', function() {
+            is24Hour = !is24Hour;
+            this.textContent = is24Hour ? '24-Hour Format' : '12-Hour Format';
+            updateClock();
+        });
+
+        document.getElementById('lightMode').addEventListener('click', () => {
+            document.body.classList.remove('dark-mode', 'custom-mode');
+            showNotification('Theme Changed', 'Light mode activated');
+        });
+
+        document.getElementById('darkMode').addEventListener('click', () => {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('custom-mode');
+            showNotification('Theme Changed', 'Dark mode activated');
+        });
+
+        document.getElementById('customBg').addEventListener('input', (e) => {
+            document.documentElement.style.setProperty('--custom-bg', e.target.value);
+            document.body.classList.add('custom-mode');
+            document.body.classList.remove('dark-mode');
+            showNotification('Theme Changed', 'Custom background applied');
+        });
+
+        document.getElementById('timezoneSelect').addEventListener('change', function() {
+            currentTimezone = this.value;
+            timezoneLabel.textContent = this.options[this.selectedIndex].text;
+            updateClock();
+            showNotification('Timezone Changed', `Now showing ${this.options[this.selectedIndex].text}`);
+        });
+
+        // ============================================
+        // FULLSCREEN CONTROL
+        // ============================================
+        
+        document.getElementById('fullscreenBtn').addEventListener('click', () => {
+            const clockArea = document.getElementById('clockArea');
+            if (!document.fullscreenElement) {
+                clockArea.requestFullscreen().catch(err => {
+                    showNotification('Fullscreen Error', 'Fullscreen not supported on this device', 'error');
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        // ============================================
+        // DOWNLOAD SCREENSHOT (FIXED VERSION)
+        // ============================================
+        
+        document.getElementById('downloadBtn').addEventListener('click', async () => {
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set canvas size
+                canvas.width = 1200;
+                canvas.height = 800;
+
+                // Background Gradient
+                const gradient = ctx.createLinearGradient(0, 0, 1200, 800);
+                gradient.addColorStop(0, '#667eea');
+                gradient.addColorStop(1, '#764ba2');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 1200, 800);
+
+                // Add decorative circles
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.beginPath();
+                ctx.arc(200, 150, 100, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(1000, 650, 150, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Time Text
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 120px Arial';
+                ctx.textAlign = 'center';
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+                ctx.shadowBlur = 20;
+                ctx.shadowOffsetX = 4;
+                ctx.shadowOffsetY = 4;
+                ctx.fillText(digitalTime.textContent, 600, 320);
+
+                // Date Text
+                ctx.font = '40px Arial';
+                ctx.shadowBlur = 10;
+                ctx.fillText(digitalDate.textContent, 600, 420);
+
+                // Timezone Label
+                ctx.font = '30px Arial';
+                ctx.fillText(timezoneLabel.textContent, 600, 490);
+
+                // Creator signature
+                ctx.shadowBlur = 5;
+                ctx.font = 'bold 28px Arial';
+                const creatorGradient = ctx.createLinearGradient(400, 580, 800, 580);
+                creatorGradient.addColorStop(0, '#ffd700');
+                creatorGradient.addColorStop(0.5, '#ff6b6b');
+                creatorGradient.addColorStop(1, '#4ecdc4');
+                ctx.fillStyle = creatorGradient;
+                ctx.fillText('Created by JigerAnkit.108', 600, 600);
+
+                // Footer
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '25px Arial';
+                ctx.fillText('Ultimate Professional Time Website', 600, 750);
+
+                // Convert to blob and download
+                canvas.toBlob((blob) => {
+                    const link = document.createElement('a');
+                    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+                    link.download = `time-pro-${timestamp}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                    
+                    showNotification('Download Complete! 📸', 'Clock image saved successfully');
+                }, 'image/png');
+
+            } catch (error) {
+                console.error('Download error:', error);
+                showNotification('Download Failed', 'Could not save image', 'error');
+            }
+        });
+
+        // ============================================
+        // COUNTDOWN TIMER
+        // ============================================
+        
+        document.getElementById('startCountdown').addEventListener('click', () => {
+            if (countdownPaused) {
+                countdownPaused = false;
+                const now = Date.now();
+                countdownTargetDate = new Date(now + countdownRemainingTime);
+            } else {
+                const targetDate = new Date(document.getElementById('countdownInput').value);
+                if (isNaN(targetDate)) {
+                    showNotification('Invalid Date', 'Please select a valid date and time', 'error');
+                    return;
+                }
+                countdownTargetDate = targetDate;
+            }
+
+            if (countdownInterval) clearInterval(countdownInterval);
+
+            countdownInterval = setInterval(() => {
+                const now = new Date();
+                const diff = countdownTargetDate - now;
+
+                if (diff <= 0) {
+                    document.getElementById('countdownDisplay').textContent = '🎉 Time\'s Up!';
+                    clearInterval(countdownInterval);
+                    countdownInterval = null;
+                    playSound();
+                    showNotification('Countdown Complete', 'Your countdown has finished!', 'success');
+                    return;
+                }
+
+                countdownRemainingTime = diff;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('countdownDisplay').textContent = 
+                    `${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+            }, 100);
+            
+            showNotification('Countdown Started', 'Timer is now running');
+        });
+
+        document.getElementById('pauseCountdown').addEventListener('click', () => {
+            if (countdownInterval) {
+                clearInterval(countdownInterval);
+                countdownInterval = null;
+                countdownPaused = true;
+                showNotification('Countdown Paused', 'Timer has been paused');
+            }
+        });
+
+        document.getElementById('resetCountdown').addEventListener('click', () => {
+            if (countdownInterval) clearInterval(countdownInterval);
+            countdownInterval = null;
+            countdownPaused = false;
+            countdownRemainingTime = 0;
+            document.getElementById('countdownDisplay').textContent = 'Set a target date';
+            document.getElementById('countdownInput').value = '';
+            showNotification('Countdown Reset', 'Timer has been reset');
+        });
+
+        // ============================================
+        // STOPWATCH
+        // ============================================
+        
+        document.getElementById('startStopwatch').addEventListener('click', () => {
+            if (stopwatchRunning) return;
+            stopwatchRunning = true;
+
+            const startTime = Date.now() - stopwatchTime;
+
+            stopwatchInterval = setInterval(() => {
+                stopwatchTime = Date.now() - startTime;
+                const seconds = stopwatchTime / 1000;
+                document.getElementById('stopwatchDisplay').textContent = formatTime(seconds, true);
+            }, 10);
+            
+            showNotification('Stopwatch Started', 'Timer is now running');
+          /* ============================================
+               ANALOG CLOCK HANDS
+               ============================================ */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: var(--accent-primary);
+    border-radius: var(--radius-sm);
+    transition: all 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.hand.hour {
+    width: 8px;
+    height: 25%;
+    z-index: 5;
+}
+
+.hand.minute {
+    width: 6px;
+    height: 35%;
+    z-index: 6;
+}
+
+.hand.second {
+    width: 3px;
+    height: 40%;
+    background: var(--accent-secondary);
+    z-index: 7;
+      }
+      <script>
+    const hourHand = document.querySelector('.hand.hour');
+    const minuteHand = document.querySelector('.hand.minute');
+    const secondHand = document.querySelector('.hand.second');
+    const timeEl = document.querySelector('.time');
+    const dateEl = document.querySelector('.date');
+    const timezoneEl = document.querySelector('.timezone-label');
+    const dayPeriodEl = document.querySelector('.day-period');
+
+    function updateClock() {
+        const now = new Date();
+
+        // Analog Clock
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        const hourDeg = ((hours % 12) + minutes / 60) * 30;
+        const minuteDeg = (minutes + seconds / 60) * 6;
+        const secondDeg = seconds * 6;
+
+        hourHand.style.transform = `rotate(${hourDeg}deg)`;
+        minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+        secondHand.style.transform = `rotate(${secondDeg}deg)`;
+
+        // Digital Clock
+        const hh = String(hours).padStart(2, '0');
+        const mm = String(minutes).padStart(2, '0');
+        const ss = String(seconds).padStart(2, '0');
+        timeEl.textContent = `${hh}:${mm}:${ss}`;
+
+        // Date & Day
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString(undefined, options);
+
+        // Timezone & AM/PM
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        dayPeriodEl.textContent = ampm;
+        timezoneEl.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+<div class="analog-clock-container">
+    <div class="analog-clock">
+        <div class="clock-center"></div>
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+        <!-- Optional: Numbers -->
+        <div class="clock-number" style="--i:1;"><span>1</span></div>
+        <div class="clock-number" style="--i:2;"><span>2</span></div>
+        <div class="clock-number" style="--i:3;"><span>3</span></div>
+        <div class="clock-number" style="--i:4;"><span>4</span></div>
+        <div class="clock-number" style="--i:5;"><span>5</span></div>
+        <div class="clock-number" style="--i:6;"><span>6</span></div>
+        <div class="clock-number" style="--i:7;"><span>7</span></div>
+        <div class="clock-number" style="--i:8;"><span>8</span></div>
+        <div class="clock-number" style="--i:9;"><span>9</span></div>
+        <div class="clock-number" style="--i:10;"><span>10</span></div>
+        <div class="clock-number" style="--i:11;"><span>11</span></div>
+        <div class="clock-number" style="--i:12;"><span>12</span></div>
+    </div>
+</div>
